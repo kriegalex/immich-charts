@@ -68,6 +68,12 @@ persistence:
     type: configMap
     name: {{ .Release.Name }}-immich-config
 {{- end }}
+{{- if .Values.immich.persistence.external }}
+  external:
+    enabled: true
+    mountPath: /usr/src/app/external
+    existingClaim: {{ .Values.immich.persistence.external.existingClaim }}
+{{- end }}
   library:
     enabled: true
     mountPath: /usr/src/app/upload
