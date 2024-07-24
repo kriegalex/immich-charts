@@ -6,8 +6,6 @@ on:
       - main
     paths:
       - 'charts/**'
-permissions:
-  contents: read
 
 jobs:
   release:
