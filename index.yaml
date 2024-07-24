@@ -11,6 +11,45 @@ entries:
               url: https://github.com/immich-app/immich/releases/tag/v1.95.1
     apiVersion: v2
     appVersion: v1.109.2
+    created: "2024-07-24T11:11:19.383610756Z"
+    dependencies:
+    - name: common
+      repository: https://bjw-s.github.io/helm-charts
+      version: 1.4.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.2.24
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 18.4.0
+    description: A chart to power Immich (immich.app) running on kubernetes
+    digest: b15b5c4d52bbc557d28ee482d310e911b25637e36564864c5b87060fbe2ccb83
+    home: https://immich.app/
+    icon: https://raw.githubusercontent.com/immich-app/immich/main/design/immich-logo.svg
+    maintainers:
+    - email: 5434875+PixelJonas@users.noreply.github.com
+      name: PixelJonas
+    - email: immich@bo0tzz.me
+      name: bo0tzz
+    name: immich
+    sources:
+    - https://github.com/immich-app/immich-charts/tree/main/charts/immich
+    - https://github.com/immich-app/immich
+    urls:
+    - https://github.com/kriegalex/immich-charts/releases/download/immich-0.7.2/immich-0.7.2.tgz
+    version: 0.7.2
+  - annotations:
+      artifacthub.io/category: storage
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Bumped pgvecto-rs to pg14-v0.2.0
+          links:
+            - name: Release Notes Breaking Changes
+              url: https://github.com/immich-app/immich/releases/tag/v1.95.1
+    apiVersion: v2
+    appVersion: v1.109.2
     created: "2024-07-22T15:18:43.978745092Z"
     dependencies:
     - name: common
@@ -468,4 +507,4 @@ entries:
     urls:
     - https://github.com/immich-app/immich-charts/releases/download/immich-0.0.4/immich-0.0.4.tgz
     version: 0.0.4
-generated: "2024-07-22T15:18:43.945815628Z"
+generated: "2024-07-24T11:11:19.383702498Z"
