@@ -73,6 +73,7 @@ persistence:
     enabled: true
     mountPath: /usr/src/app/external
     existingClaim: {{ .Values.immich.persistence.external.existingClaim }}
+    readOnly: {{ .Values.immich.persistence.external.readOnly }}
 {{- end }}
   library:
     enabled: true
